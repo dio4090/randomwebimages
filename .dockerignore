@@ -1,0 +1,25 @@
+.git
+Dockerfile
+.DS_Store
+.gitignore
+.dockerignore
+
+# General
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+# *.py[cod]
+# *$py.class
+
+# Environments
+.venv
+env/
+venv/
+ENV/
+
+# Front-end
+firebase.js
+site.js

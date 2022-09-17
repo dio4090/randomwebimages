@@ -1,0 +1,9 @@
+FROM rigapp-be-img-base:latest
+
+WORKDIR /app
+
+COPY . .
+
+EXPOSE 5000
+
+CMD ["sh", "start.sh"]

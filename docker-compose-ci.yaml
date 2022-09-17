@@ -1,0 +1,51 @@
+version: "3.8"
+
+services:
+
+  rigapp_fe:
+    image: rigapp-fe:latest
+    container_name: rigapp-fe
+    networks:
+      - nginxproxymanager_default
+    ports:
+      - "9090:80"
+
+  rigapp_be:
+    image: rigapp-be:latest
+    container_name: rigapp-be
+    restart: always
+    depends_on:
+      - rigapp_database
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - rigapp
+      - nginxproxymanager_default
+    ports:
+      - "5000:5000"
+    
+  rigapp_database:
+    image: postgres:14.5-alpine3.16
+    container_name: rigapp-postgres
+    volumes:
+      - "rigapp_pg_data:/var/lib/postgresql/data"
+    environment:
+        DB_HOST: ${DB_HOST}
+        DB_PORT: ${DB_PORT}
+        POSTGRES_DB: ${POSTGRES_DB}
+        POSTGRES_USER: ${POSTGRES_USER}
+        POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    networks:
+      - rigapp
+    ports:
+      - "5432:5432"
+
+volumes:
+  rigapp_pg_data:
+
+networks:
+  rigapp:
+    external: true
+  nginxproxymanager_default:
+    external: true
