@@ -1,0 +1,15 @@
+
+@Library('2code-jenkins@main')
+import br.com.isi.Commands
+import br.com.isi.ProjectMetadata
+
+def projectMetadata = new ProjectMetadata();
+def cmd = new Commands();
+
+projectMetadata.projectName = "randomwebimages"
+projectMetadata.dockerfile = "Dockerfile"
+projectMetadata.language = "randomwebimages"
+projectMetadata.version = "1.0"
+projectMetadata.sourcesPath = "src"
+
+cmd.exec(projectMetadata);
