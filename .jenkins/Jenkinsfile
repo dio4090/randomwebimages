@@ -1,5 +1,5 @@
 
-@Library('2code-jenkins@main')
+@Library('MyJenkins@main')
 import br.com.twocode.Commands
 import br.com.twocode.ProjectMetadata
 
