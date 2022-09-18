@@ -1,7 +1,46 @@
 var link_frame1 = "";
 var link_frame2 = "";
 var link_frame3 = "";
-var frame_count = 0;
+
+function ajustText(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function insertSelectCategoryItems(optionStr) {
+    //add one option
+    let select = document.getElementById('formCategoryItem');
+    let option = document.createElement('option');
+
+    option.value = optionStr;
+    option.text = optionStr;
+    select.add(option);
+}
+
+function checkSelectedCategory() {
+    var el = document.getElementById("formCategory");
+    var formCategoryValue = el.options[el.selectedIndex].value;
+    var divFormCategoryItem = document.getElementById('divFormCategoryItem');
+
+    console.log("Valor: "+formCategoryValue)
+
+    if(formCategoryValue === 'animals') {
+        divFormCategoryItem.style.visibility='visible'
+    } else {
+        divFormCategoryItem.style.visibility='hidden'
+    }
+
+    if(formCategoryValue === 'animals'){
+
+        var len=$("#formCategoryItem").children('option').length;
+
+        if(len <= 1) {
+            insertSelectCategoryItems(ajustText('dog'))
+            insertSelectCategoryItems(ajustText('cat'))
+            insertSelectCategoryItems(ajustText('horse'))
+        }
+    }
+
+}
 
 function downloadImage1() {
     var link = document.createElement('a');
@@ -54,9 +93,8 @@ function getImage(imgId) {
         if (err !== null) {
             console.log('Something went wrong: ' + err);
         } else {
-            frame_count++
             document.getElementById('img_home'+imgId).src=data.image.link;
-            
+
             if(imgId === 1)
                 link_frame1 = data.image.link
             else if(imgId === 2)
@@ -73,8 +111,8 @@ function getRandomNumberBetween(min,max){
 
 function loadImages() {
     getImage(1);
-    getImage(2);  
-    getImage(3);  
+    getImage(2);
+    getImage(3);
 }
 
 window.onload = function() {
@@ -85,3 +123,6 @@ function refreshPage()
 {
     window.location.reload();
 }
+
+// START THE APP
+checkSelectedCategory();
