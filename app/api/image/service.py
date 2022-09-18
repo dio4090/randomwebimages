@@ -15,7 +15,7 @@ class ImageService:
     def get_image_data(image_id):
         """ Pegar dados da imagem pelo image_id """
         if not(image := Image.query.filter_by(id=image_id).first()):
-            return err_resp("Image not found!", "image_404", 404)
+            return err_resp("Image not found!", 404)
         
         from .utils import load_data
 
@@ -42,7 +42,7 @@ class ImageService:
         rid = random.randint(1, max_count)
             
         if not(image := Image.query.filter_by(id=rid).first()):
-            return err_resp("Image not found!", "image_404", 404)
+            return err_resp("Image not found!", 404)
         
         from .utils import load_data
 
