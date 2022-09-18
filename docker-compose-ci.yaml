@@ -3,16 +3,16 @@ version: "3.8"
 services:
 
   rigapp_fe:
-    image: ${DOCKER_IMAGE}
-    container_name: ${CONTAINER_NAME}
+    image: ${DOCKER_IMAGE_FE}
+    container_name: ${CONTAINER_NAME_FE}
     networks:
       - nginxproxymanager_default
     ports:
       - "9090:80"
 
   rigapp_be:
-    image: ${DOCKER_IMAGE}
-    container_name: ${CONTAINER_NAME}
+    image: ${DOCKER_IMAGE_BE}
+    container_name: ${CONTAINER_NAME_BE}
     restart: always
     depends_on:
       - rigapp_database
