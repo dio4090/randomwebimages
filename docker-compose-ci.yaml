@@ -16,9 +16,6 @@ services:
     restart: always
     depends_on:
       - rigapp_database
-    build:
-      context: .
-      dockerfile: Dockerfile
     networks:
       - rigapp
       - nginxproxymanager_default
