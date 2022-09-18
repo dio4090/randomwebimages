@@ -34,12 +34,8 @@ class ImageService:
     def get_random_image_data():
         """ Pegar dados de uma imagem aleatória """
 
-        # Verifica o número máximo de imagens
-        #max_count = Image.query.filter(Image.id >= 1).count()
-        max_count = 56
-
         # Pega um random entre 1 e o número máximo de objetos de Imagem
-        rid = random.randint(1, max_count)
+        rid = random.randint(1, 56)
             
         if not(image := Image.query.filter_by(id=rid).first()):
             return err_resp("Image not found!", 404)
