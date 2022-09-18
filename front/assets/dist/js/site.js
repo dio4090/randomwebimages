@@ -1,6 +1,17 @@
+// START THE APP
 var link_frame1 = "";
 var link_frame2 = "";
 var link_frame3 = "";
+
+var el = document.getElementById("formCategory");
+var formCategoryValue = el.options[el.selectedIndex].value;
+var divFormCategoryItem = document.getElementById('divFormCategoryItem');
+
+if(formCategoryValue === 'animals') {
+    divFormCategoryItem.style.visibility='visible'
+} else {
+    divFormCategoryItem.style.visibility='hidden'
+}
 
 function ajustText(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -123,6 +134,3 @@ function refreshPage()
 {
     window.location.reload();
 }
-
-// START THE APP
-checkSelectedCategory();
