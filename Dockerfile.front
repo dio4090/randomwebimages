@@ -1,16 +1,3 @@
-FROM python:3.10.6-slim as build
-
-WORKDIR /app
-
-RUN pip install jsmin
-
-COPY front/assets/dist/js/site.js .
-COPY front/assets/dist/js/firebase.js .
-
-# Compactar arquivos JS
-RUN python -m jsmin site.js > site-min.js
-RUN python -m jsmin firebase.js > firebase-min.js
-
 FROM nginx:alpine as main
 
 COPY --from=build /app/site-min.js front/assets/dist/js/.
