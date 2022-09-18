@@ -1,7 +1,7 @@
 
 @Library('MyJenkins@main')
-import br.com.twocode.Commands
-import br.com.twocode.ProjectMetadata
+import Commands
+import ProjectMetadata
 
 def projectMetadata = new ProjectMetadata();
 def cmd = new Commands();
