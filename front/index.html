@@ -10,6 +10,9 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
 
+    <!-- CSS Personalizado -->
+    <link href="assets/dist/css/project.css" rel="stylesheet">
+
     <!-- Bootstrap core CSS -->
     <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -79,19 +82,38 @@
     </div>
   </section>
 
+  <div class="form-select-center">
+    <select id="form-category" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+      <option selected="">Select a category</option>
+      <option value="animals">Animals</option>
+      <option value="vehicles">Vehicles (coming soon)</option>
+      <option value="technology">Technology (coming soon)</option>
+      <option value="food">Food (coming soon)</option>
+    </select>
+  </div>
+
   <div class="album py-5 bg-light">
     <div class="container">
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <div class="col">
           <div class="card shadow-sm">
-            <!-- MUDAR AQUI A IMAGEM -->
-            <img id="img_home2" src="https://i.pinimg.com/originals/10/b2/f6/10b2f6d95195994fca386842dae53bb2.png" class="card-img-top" alt="...">
+            <div class="bd-example">
+              
+              <div class="center">
+                <div class="spinner-border text-primary" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
+
+            </div>
+            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
+            <!-- <img id="img_home1" src="https://i.pinimg.com/originals/10/b2/f6/10b2f6d95195994fca386842dae53bb2.png" class="card-img-top" alt="..."> -->
 
             <div class="card-body">
               <!-- SMALL TEXT HERE -->
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
+                <div class="btn-center">
                   <button type="button" class="btn btn-outline-success" onclick="downloadImage2()">Go to Image</button>
                 </div>
               </div>
@@ -100,13 +122,22 @@
         </div>
         <div class="col">
           <div class="card shadow-sm">
-            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">OIOIOI</text></svg> -->
-            <img id="img_home3" src="https://i.pinimg.com/originals/10/b2/f6/10b2f6d95195994fca386842dae53bb2.png" class="card-img-top" alt="...">
+            <div class="bd-example">
+              
+              <div class="center">
+                <div class="spinner-border text-primary" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
+
+            </div>
+            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
+            <!-- <img id="img_home1" src="https://i.pinimg.com/originals/10/b2/f6/10b2f6d95195994fca386842dae53bb2.png" class="card-img-top" alt="..."> -->
 
             <div class="card-body">
               <!-- SMALL TEXT HERE -->
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
+                <div class="btn-center">
                   <button type="button" class="btn btn-outline-success" onclick="downloadImage3()">Go to Image</button>
                 </div>
               </div>
@@ -115,13 +146,22 @@
         </div>
         <div class="col">
           <div class="card shadow-sm">
+            <div class="bd-example">
+        
+              <div class="center">
+                <div class="spinner-border text-primary" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
+
+            </div>
             <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
-            <img id="img_home1" src="https://i.pinimg.com/originals/10/b2/f6/10b2f6d95195994fca386842dae53bb2.png" class="card-img-top" alt="...">
+            <!-- <img id="img_home1" src="https://i.pinimg.com/originals/10/b2/f6/10b2f6d95195994fca386842dae53bb2.png" class="card-img-top" alt="..."> -->
 
             <div class="card-body">
               <!-- SMALL TEXT HERE -->
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
+                <div class="btn-center">
                   <button type="button" class="btn btn-outline-success" onclick="downloadImage1()">Go to Image</button>
                 </div>
               </div>

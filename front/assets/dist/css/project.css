@@ -1,0 +1,17 @@
+
+.center {
+    display: table;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+.btn-center {
+    display: table;
+    margin: 0 auto;
+}
+
+.form-select-center {
+    width: 50vw;
+    /* height: 70vh; */
+    margin: 5vh auto;
+}
