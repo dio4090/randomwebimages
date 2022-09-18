@@ -37,7 +37,6 @@ class ImageService:
         # Verifica o número máximo de imagens
         #max_count = Image.query.filter(Image.id >= 1).count()
         max_count = 56
-        print("max_count: "+max_count)
 
         # Pega um random entre 1 e o número máximo de objetos de Imagem
         rid = random.randint(1, max_count)
