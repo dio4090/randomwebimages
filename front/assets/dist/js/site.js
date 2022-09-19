@@ -44,7 +44,7 @@ function checkSelectedCategory() {
 
         var len=$("#formCategoryItem").children('option').length;
 
-        if(len <= 1) {
+        if(len == 1) {
             insertSelectCategoryItems(ajustText('dog'))
             insertSelectCategoryItems(ajustText('cat'))
             insertSelectCategoryItems(ajustText('horse'))
